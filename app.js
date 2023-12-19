@@ -1,11 +1,11 @@
 // app.js
 
+const proxyUrl = 'http://localhost:3001'; // Replace with the actual URL of your proxy server
+
 function predict() {
     const inputValue = document.getElementById('inputValue').value;
 
-    // Call the API (replace with your actual API endpoint)
-    const apiUrl = 'https://your-api-endpoint.com/predict';
-    fetch(apiUrl, {
+    fetch(`${proxyUrl}/predict`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
